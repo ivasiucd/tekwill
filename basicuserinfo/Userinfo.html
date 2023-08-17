@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<fieldset>
+    <legend>Basic User Information:</legend>
+<form action="/action_page.php">
+<label for="fname">Full name:</label>
+<input type="text" id="fname" name="fname">
+</form>
+
+
+<form action="/action_page.php">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+</form>
+
+
+<form action="/action_page.php">
+<label for="pwd">Password:</label>
+<input type="password" id="pwd" name="pwd">
+<label for="pwd">Confirm Password:</label>
+<input type="confirm password">
+</form>
+
+
+<form action="/action_page.php">
+Gender:
+     <input type="radio" name="gender" value="Male" />Male
+     <input type="radio" name="gender" 
+     value="Woman"/>Woman
+     <input type="radio" name="gender" 
+     value="Other"/>Other
+     </form>
+
+
+<form action="/action_page.php">
+  <label for="birthday">Date of Birth:</label>
+  <input type="date" id="birthday" name="birthday">
+</form>
+</fieldset>
+
+
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Adress Information:</legend>
+    
+    <form action="/action_page.php">
+    <label for="adress">Street Adress:</label>
+  <textarea name="adress" rows="2" cols="30"></textarea>
+</form>
+
+
+<form action="/action_page.php">
+  <label for="Country">Country:</label>
+  <select id="country" name="country">
+    <option value="USA"selected>USA</option>
+    <option value="Germany">Germany</option>
+    <option value="Moldova">Moldova</option>
+    <option value="Italy">Italy</option>
+     <option value="France">France</option>
+     </select> 
+</form>
+
+
+<form action="/action_page.php">
+<label for="city">City:</label>
+<input type="text" id="city" name="city">
+</form>
+
+
+<form action="/action_page.php">
+<label for="postalcode">Postal Code:</label>
+<input type="text" id="postal" name="postal">
+</form>
+  </fieldset>
+  
+  
+  <fieldset>
+    <legend>Preferences:</legend>
+    
+    <form action="/action_page.php">
+    <label for="contact_method">Prefered Contact Method:</label>
+     <input type="checkbox" name="contact_method1" value="Email" />Email
+     <input type="checkbox" name="contact_method2" 
+     value="Phone"/>Phone
+     <input type="checkbox" name="contact_method3" 
+     value="Postal Mail"/>Postal Mail <br>
+     </form>
+     
+
+<form action="/action_page.php">
+  <label for="favcolor">Favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#0000">
+  </form>
+</fieldset>
+
+
+  <fieldset>
+    <legend>Additional Details:</legend>
+    
+    <form action="/action_page.php">
+  <label for="choise">How did you hear about us?:</label>
+  <select id="choise" name="choise">
+    <option value="Internet"selected>Internet</option>
+    <option value="TV">TV</option>
+    <option value="Banner">Advertising banner</option>
+    <option value="Friends">Friends</option>
+     </select> 
+</form>
+
+
+   <form action="/action_page.php">
+    <label for="feedback">Feedback/Comments:</label>
+  <textarea name="adress" rows="3" cols="36"></textarea>
+</form>
+</fieldset>
+
+
+<fieldset>
+    <legend>Profile:</legend>
+    
+    <form action="/action_page.php">
+  <label for="choosefile">Upload a Profile Picture:</label>
+  <input type="file" id="choosefile" name="choosefile">
+</form>
+    
+
+  <form action="/action_page.php">
+  <label for="website">Website URL:</label>
+  <input type="url" id="website" name="website">
+</form>
+
+
+<form action="/action_page.php"
+<label for="level">Experience Level with HTML:</label>
+<oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="5" name="5">
+  5/10
+</form>
+    </fieldset>
+    
+     <input type="submit">
+  <input type="reset">
+
+   </body>
+ </html>
