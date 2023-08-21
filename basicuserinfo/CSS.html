@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <style>
+            body {
+                background-color: rgb(236, 236, 236);
+        }
+            form {
+                background-color: lightbeige;
+                padding: 20px;
+                margin-left: 20%;
+                margin-right: 15%;
+        }
+           fieldset {
+            text-align: left;
+            font-size: 14px; 
+            font-family: italic;
+            border-radius: 8px;
+            border: 1px solid #0c6a67;
+            line-height: 1.8;
+           }
+           legend {
+            color:#0c6a67; 
+            font-size: 22px; 
+            font-family: italic; 
+            font-style: verdana; 
+        }
+        label {
+            font-weight: bold;
+        }
+        label.nobold {
+            font-weight: lighter;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 15px;
+            border-radius: 7px;
+            border: 1px solid rgb(205, 200, 202);
+            resize: none;
+            margin: auto;
+        }
+        input:hover {
+            border-color: #0c6a67;
+        }
+        input.nowidth {
+            width: 6%;
+        }
+        input.submit {
+            background-color: rgb(19, 110, 224);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 25%;
+            text-align: center;
+        }
+        input.submit:hover {
+            background-color: green;
+        }
+        input.reset {
+            background-color: rgb(152, 148, 148);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 30%;
+            text-align: center;
+        }
+        input.reset:hover {
+            background-color: beige;
+        }
+        </style>
+    </head>  
+    <body>
+        <form action="/action_page.php" method="get">
+            <fieldset>
+                <legend>Basic User Information</legend>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"><br>
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass"><br>
+                <label for="confpass">Confirm Password:</label><br>
+                <input type="password" id="confpass" name="confpass"><br>
+                <label>Gender:</label><br>
+                <input class="nowidth" type="radio" id="male" name="gender" value="male">
+                <label class="nobold" for="male">Male</label>
+                <input class="nowidth" type="radio" id="female" name="gender" value="female">
+                <label class="nobold" for="female">Female</label>
+                <input class="nowidth" type="radio" id="other" name="gender" value="other">
+                <label class="nobold" for="other">Other</label><br>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob">
+            </fieldset><br>
+
+            <fieldset>
+           
+                <legend>Address Information</legend>
+                <label>Street Address:</label><br>
+                <textarea name="address" rows="3" cols="20"></textarea><br>
+                
+                <label for="country">Country:</label><br>
+                <select id="country" name="country">
+                    <option value="">--Please choose Country--</option>
+                    <option value="md">Moldova</option>
+                    <option value="ua">Ukraine</option>
+                    <option value="fr">France</option>
+                    <option value="us">United States</option>
+                    <option value="de">Germany</option>
+                </select><br>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city"><br>
+                
+                <label for="post">Postal Code:</label><br>
+                <input type="number" id="post" name="post"><br>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>Preferred Contact Method:</label><br>
+                <input class="nowidth" type="checkbox" id="email1" name="method1" value="email">
+                <label class="nobold" for="email1">Email</label>
+                <input class="nowidth" type="checkbox" id="phone2" name="method2" value="phone">
+                <label class="nobold" for="phone2">Phone</label>
+                <input class="nowidth" type="checkbox" id="postal3" name="method3" value="postal">
+                <label class="nobold" for="postal">Postal Mail</label><br>
+                
+                <label for="favcolor">Favourite Colour:</label>
+                <input style="padding: 2px; border-radius: 10px; width: 50px;" type="color" id="favcolor" name="favcolor" value="#E0FFFF">
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+                <label for="choise">How did you hear about us?</label><br>
+                <select id="choise" name="choise">
+                    <option value="">--Please choose one--</option>
+                    <option value="internet">Internet</option>
+                    <option value="tv">TV</option>
+                    <option value="friends">Friends</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                    <label>Feedback/Comments:</label><br>
+                <textarea name="adress" rows="4" cols="35"></textarea><br>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Profile</legend>
+                <label for="photo">Uploud a Profile Picture</label>
+                <input style="width: 50%; padding: 0%; border: none; border-radius: 2px; margin: 0px;" type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png"><br>
+                
+                <label for="url">Website URL:</label><br>
+                <input type="url" id="url" name="url"><br>
+                
+        <label for="level">Experience Level with HTML:</label>
+        <input style="width: 30%; padding: 0px;" type="range" name="level" id="level" min="0" max="10" oninput="DisplayValue.value=level.value">
+        <output id="DisplayValue"></output>
+            </fieldset><br>
+
+            <input class="submit" type="submit" value="Submit">
+            <input class="reset" type="reset" value="Reset">
+        </form>
+    </body>
+</html>
